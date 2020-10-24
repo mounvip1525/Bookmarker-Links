@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color: #555555;
+    height:50px;
+    text-align:center;
+}
+nav >span{
+    font-size:30px;
+    background:#cdc9c3;
+    padding:5px;
+    border-radius:4px;
+    font-family: 'Open Sans', sans-serif;
+}
+.split{
+    height:100%;
+    width:50%;
+    position:fixed;
+}
+.left{
+    left:0;
+    background-image: -webkit-linear-gradient(225deg,#fbf7f0 50%,#d9e4dd 50%);
+}
+.right{
+    right:0;
+    background-image: -webkit-linear-gradient(135deg,#fbf7f0 50%,#d9e4dd 50%);
+}
+h1{
+    position:absolute;
+    background:rgba(117, 116, 116, 0.5);
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:2rem;
+    color:black;
+    margin-left:48.5%;
+    font-family: 'Karla', sans-serif;
+}
+h1:hover{
+    background:rgba(87, 86, 86, 0.5);
+    transform:scale(1.1);
+}
