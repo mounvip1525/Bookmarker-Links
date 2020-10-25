@@ -34,15 +34,88 @@ nav >span{
 h1{
     position:absolute;
     background:rgba(117, 116, 116, 0.5);
-    padding:10px;
+    padding:15px;
     border-radius:5px;
+    text-align:center;
     cursor:pointer;
-    font-size:2rem;
+    font-size:2.5rem;
     color:black;
-    margin-left:48.5%;
+    margin-left:48%;
     font-family: 'Karla', sans-serif;
 }
 h1:hover{
     background:rgba(87, 86, 86, 0.5);
     transform:scale(1.1);
+}
+.container{
+    margin-top:8%;
+}
+.bookmark-container{
+    position:absolute;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.bookmark{
+    border-radius: 5px;
+    background-color:rgba(117, 116, 116, 0.5);
+    padding:10px;
+    padding-right:25px;
+    margin:20px;
+}
+.bookmark:hover{
+    background-color:rgba(59, 57, 57, 0.5);
+}
+a{
+    font-size:20px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+a:link,a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover,a:active{
+   text-decoration: underline;
+}
+.fa-times{
+    float:right;
+    cursor:pointer;
+    transition: all 2s ease-out 0s;
+    color:rgb(80, 78, 78);
+}
+.fa-times:hover{
+    transform: rotate(360deg);
+    transition: all 0.9s ease-in-out 0s;
+    color:black;
+}
+.name{
+    margin-top:17px;
+    display:flex;
+    flex-direction: row;
+}
+.favicon{
+    height:20px;
+    width:20px;
+    margin-right:5px;
+    vertical-align: sub;
+}
+@media screen and (max-width:500px){
+    h1{
+        font-size:30px;
+        margin-left:45%;
+    }
+    .container{
+        margin-top:22%;
+    }
+    .bookmark-container{
+        flex-direction:column;
+        width:100%;
+    }
+    .bookmark{
+        margin-right:10%;
+    }
+    .name{
+        margin-left:30%;
+    }
 }
