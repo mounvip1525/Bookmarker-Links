@@ -47,29 +47,28 @@ h1:hover{
     background:rgba(87, 86, 86, 0.5);
     transform:scale(1.1);
 }
-.container{
-    margin-top:8%;
-}
 .bookmark-container{
     position:absolute;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
+    margin-top:9%;
 }
-.bookmark{
+.bookmark-item{
     border-radius: 5px;
     background-color:rgba(117, 116, 116, 0.5);
     padding:10px;
-    padding-right:25px;
     margin:20px;
+    width:auto;
 }
-.bookmark:hover{
+.bookmark-item:hover{
     background-color:rgba(59, 57, 57, 0.5);
+    transform:scale(1.1);
 }
 a{
     font-size:20px;
-    font-weight:bold;
     text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a:link,a:visited{
     text-decoration: none;
@@ -81,12 +80,14 @@ a:hover,a:active{
 .fa-times{
     float:right;
     cursor:pointer;
-    transition: all 2s ease-out 0s;
+    margin-right:2%;
+    margin-top:1%;
+    transition: all 1s ease-out 0s;
     color:rgb(80, 78, 78);
 }
 .fa-times:hover{
-    transform: rotate(360deg);
-    transition: all 0.9s ease-in-out 0s;
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out 0s;
     color:black;
 }
 .name{
@@ -100,17 +101,88 @@ a:hover,a:active{
     margin-right:5px;
     vertical-align: sub;
 }
+/* modal-container and show model are part of the same div,first class has a display of none and the second class ie.show-modal will allow to override the display to flex  */
+.modal-container{
+    position:fixed;
+    background:rgba(0,0,0,0.85);
+    display:none;
+    /* for taking up the entire page */
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.show-model{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    box-shadow: 0 0 10px rgba(122, 119, 119, 0.8);
+    background:white;
+    width:500px;
+    max-width:80%;
+    animation:openmodal 1s;
+}
+@keyframes openmodal{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.modal-header{
+    background:#d9e4dd;
+    color: #555555;
+    padding:15px;
+}
+h3{
+    margin:0;
+}
+.modal-content{
+    padding:15px;
+    background:whitesmoke;
+}
+.form-group{
+    height:55px;
+}
+.form-label{
+    color:#555555;
+}
+.form-input{
+    width:97%;
+    padding:5px;
+    border:1.2px solid #555555;
+    border-radius:5px;
+    outline:none;
+} 
+button{
+    width:150px;
+    height:25px;
+    border-radius: 5px;
+    background:#cdc9c3;
+    color:#3d3c3c;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#a19e99;
+    transform:scale(1.02);
+}
+button:active{
+    transform:translateY(3px);
+}
 @media screen and (max-width:500px){
     h1{
         font-size:30px;
         margin-left:45%;
     }
-    .container{
-        margin-top:22%;
-    }
     .bookmark-container{
         flex-direction:column;
         width:100%;
+        margin-top:25%;
     }
     .bookmark{
         margin-right:10%;

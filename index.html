@@ -12,29 +12,26 @@
     <nav><span>My Bookmarkers!</span></nav>
     <div class="split left"></div>
     <div class="split right"></div>
-    <h1>+</h1>
-    <div class="container">
-        <div class="bookmark-container">
-            <div class="bookmark">
-                <i class="fas fa-times" class="delete" id="delete" title="delete"></i>
-                <div class="name" >
-                    <img src="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com" class="favicon">
-                    <a href="www.google.com" target="_blank">Google</a>
-                </div>
+    <h1 id="display-modal">+</h1>
+        <div class="bookmark-container" id="bookmark-container"></div>
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <i class="fas fa-times" id="close-modal" title="Close"></i> 
+            <div class="modal-header">
+                <h3>Add bookmark</h3>
             </div>
-            <div class="bookmark">
-                <i class="fas fa-times" class="delete" id="delete" title="delete"></i>
-                <div class="name" >
-                    <img src="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com" class="favicon">
-                    <a href="www.google.com" target="_blank">Google</a>
-                </div>
-            </div>
-            <div class="bookmark">
-                <i class="fas fa-times" class="delete" id="delete" title="delete"></i>
-                <div class="name" >
-                    <img src="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com" class="favicon">
-                    <a href="www.google.com" target="_blank">Google</a>
-                </div>
+            <div class="modal-content">
+                <form id="bookmark-form">
+                    <div class="form-group">
+                        <label for="website-name" class="form-label">Website Name</label>
+                        <input type="text" class="form-input" id="website-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input type="text" class="form-input" id="website-url">
+                    </div>
+                    <button type="submit">Save!</button>
+                </form>
             </div>
         </div>
     </div>
