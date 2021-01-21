@@ -59,11 +59,11 @@ h1:hover{
     background-color:rgba(117, 116, 116, 0.5);
     padding:10px;
     margin:20px;
-    width:auto;
+    min-width:130px;
 }
 .bookmark-item:hover{
     background-color:rgba(59, 57, 57, 0.5);
-    transform:scale(1.1);
+    /* transform:scale(1.1); */
 }
 a{
     font-size:20px;
@@ -99,7 +99,6 @@ a:hover,a:active{
     height:20px;
     width:20px;
     margin-right:5px;
-    vertical-align: sub;
 }
 /* modal-container and show model are part of the same div,first class has a display of none and the second class ie.show-modal will allow to override the display to flex  */
 .modal-container{
@@ -118,11 +117,13 @@ a:hover,a:active{
     align-items: center;
 }
 .modal{
-    box-shadow: 0 0 10px rgba(122, 119, 119, 0.8);
-    background:white;
-    width:500px;
+    box-shadow: 0 0 5px rgba(122, 119, 119, 0.8);
+    background:#b5beb8;
+    width:35vw;
     max-width:80%;
     animation:openmodal 1s;
+    padding:20px;
+    border-radius: 5px;
 }
 @keyframes openmodal{
     from{
@@ -169,7 +170,7 @@ button{
 }
 button:hover{
     background:#a19e99;
-    transform:scale(1.02);
+    /* transform:scale(1.02); */
 }
 button:active{
     transform:translateY(3px);
